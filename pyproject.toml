@@ -1,0 +1,28 @@
+[project]
+name = "cleangpt"
+version = "0.1.0.dev"
+description = "An experimental LLM framework"
+authors = [
+    {name = "Chhaya Kumar Das", email = "chayakudas.das56@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+dependencies = [
+  "typer",
+]
+
+[project.scripts]
+cleangpt = "cleangpt.main:app"
+
+[build-system]
+requires = [
+    "setuptools >= 68.0",
+    "wheel >= 0.41",
+    ]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = [
+    "cleangpt",
+    "cleangpt.*",
+]
